@@ -1,0 +1,81 @@
+-- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: capteur
+-- ------------------------------------------------------
+-- Server version	8.0.34
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `mesure`
+--
+
+DROP TABLE IF EXISTS `mesure`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `mesure` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `numero` int DEFAULT NULL,
+  `dateandheure` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `T` int DEFAULT NULL,
+  `p` int DEFAULT NULL,
+  `H` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mesure`
+--
+
+LOCK TABLES `mesure` WRITE;
+/*!40000 ALTER TABLE `mesure` DISABLE KEYS */;
+INSERT INTO `mesure` VALUES (69,1,'2025-11-15 14:17:11',17,65,982),(70,1,'2025-11-15 14:17:14',16,90,1003),(71,1,'2025-11-15 14:17:17',9,40,951),(72,1,'2025-11-15 14:17:20',28,67,1008),(73,1,'2025-11-15 14:17:23',7,87,951),(74,1,'2025-11-15 14:17:26',3,33,959),(75,1,'2025-11-15 14:17:29',28,68,954),(76,1,'2025-11-15 14:17:32',1,87,984),(77,1,'2025-11-15 15:54:25',6,81,955),(78,1,'2025-11-15 15:54:28',19,99,955),(79,1,'2025-11-15 15:54:31',9,5,979),(80,2,'2025-11-15 15:55:50',17,74,971),(81,2,'2025-11-15 15:55:53',31,83,962),(82,2,'2025-11-15 15:55:56',13,38,1002),(83,3,'2025-11-15 15:56:14',31,99,968),(84,3,'2025-11-15 15:56:17',39,26,1003),(85,3,'2025-11-15 15:56:20',37,63,985),(86,3,'2025-11-15 15:56:23',21,50,995);
+/*!40000 ALTER TABLE `mesure` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'admin','admin123','admin'),(2,'capteur','capteur123','capteur');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-11-15 18:35:32
